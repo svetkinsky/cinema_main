@@ -490,7 +490,21 @@ a{
 .top-block__col3{
     width: 25%;
 }
+.top-block__col3 p{
+    padding: 1.1rem 0 0;
+}
+.top-block__col3 p span{
+    font-size: 0.75rem;
+    color: #fff;
+    font-weight: 100;
+}
+.top-block__col3 p a{
+    border-bottom: 1px solid #fff;
+    font-size: 0.75rem;
+    color: #fff;
+    font-weight: 100;
 
+}
 /* .logo{
     float: left;
     position: absolute;   
@@ -504,9 +518,13 @@ a{
 .top-block__nav{
     padding: 1.1rem 0 0;
 }
+.top-block .top-block__nav li + li{
+    margin-left: 0.65rem;
+}
 .menu__item{
-    float: left;
-    margin-left: 38px;
+    /* float: left;
+    margin-left: 38px; */
+    display: inline-block;
 }
 .menu__link{
     font-size: 15px;
@@ -515,15 +533,19 @@ a{
     color:#fff;
 }
 .descriptors{
-    text-align: center;
+    padding: 7.5rem 0 12.5rem;
+    /* text-align: center; */
 }
 .descriptors__one{
-    margin-bottom: 11px;
+    margin-bottom: 0.5 rem;
+    line-height: 1;
+    font-size: 4rem;
     color: #fff;
     font-weight: 100;
 }
 .descriptors__two{
-    font-size: 50px;
+    font-size: 2.5rem;
+    line-height: 1;
     color: #fff;
 }
 /* .top-block:after{
