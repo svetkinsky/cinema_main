@@ -422,10 +422,11 @@ p{
     font-size: 14px;
     font-weight: 300;
     line-height: 1.2;
+    margin-top: 19px;
 }
-p + p{
-    margin-bottom: 19px;
-}
+/* p + p: {
+    margin-top: 19px;
+} */
 a{
     text-decoration: none;
 }
@@ -439,39 +440,37 @@ a{
     padding-top: 53px;
     padding-bottom: 366px; 
     margin-bottom: 84px; 
+    position: relative;
+    overflow: hidden;
 }
-.top-block:after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    background: #fff;
-    transform: rotate(-3.5deg);
-    bottom: 104px;
-    left: 0;
-    right: 0;
-    height: 170px;
-}
+
 .content{
     width: 1030px;
     margin: auto;
+    
 }
 .logo-menu{
-    margin-bottom: 161px;
+    position: relative;
+
+    /* margin-bottom: 210px; */
 }
 .logo{
-    display: inline-block;
+    float: left;
+    position: absolute;   
 }
 .menu{
-    display: inline-block;
-    margin-left: 218px;
-    line-height: 40px;
+    position: absolute;
+    float: left;
+    margin-left: 410px;
+    line-height: 50px;
 }
 .menu__item{
-    display: inline-block;
-    margin-left: 37px;
+    float: left;
+    margin-left: 38px;
 }
 .menu__link{
     font-size: 15px;
+    font-weight: 100;
     text-transform: uppercase;
     color:#fff;
 }
@@ -486,6 +485,25 @@ a{
 .descriptors__two{
     font-size: 50px;
     color: #fff;
+}
+/* .top-block:after{
+    content: "";
+    position: absolute;
+    width: 120%;
+    background: #fff;
+    transform: rotate(-3.5deg);
+    bottom: 104px;
+    left: 0;
+    right: 0;
+    height: 170px;
+} */
+.top-block:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-left: 100vw solid transparent;
+    border-bottom: 5.55rem solid #fff;
 }
 .block-2{
     width: 1030px;
@@ -512,3 +530,22 @@ a{
 .block-2__row{
     overflow: hidden;
 }
+.block-2{
+    position: relative;
+}
+.block__info{
+    width: 516px;
+    padding: 35px 30px;
+    background: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
+    position: absolute;
+    top: -213px;
+    right: 0;
+    z-index: 1;
+}
+.block__info h2{
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+
+  
