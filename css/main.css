@@ -431,15 +431,18 @@ a{
     text-decoration: none;
 }
 .top-block{
-    background-image: url('../images/top_bg.jpg');
-    /* background-color: #000; */
+    background: url(../images/top_bg.jpg) no-repeat top center / cover;
+    /* background-color: #000;
     background-position: center;  
     background-repeat: no-repeat;
     background-size: 100%; 
-    /* background-origin: content-box;  */
+    
     padding-top: 53px;
     padding-bottom: 366px; 
     margin-bottom: 84px; 
+    position: relative;
+    overflow: hidden; */
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
 }
@@ -505,10 +508,34 @@ a{
     border-left: 100vw solid transparent;
     border-bottom: 5.55rem solid #fff;
 }
+
 .block-2{
     width: 1030px;
     margin: auto;
+    /* position: relative; */
 }
+
+.block-2__pluses{
+    padding-top: 200px;
+}
+
+.block2__info-wrap {
+    /* width: 1030px;
+    margin: 0 auto; */
+    position: relative;
+}
+
+.block2__info{
+    width: 516px;
+    padding: 35px 30px;
+    background: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
+    position: absolute;
+    top: -213px;
+    right: 0;
+    z-index: 1;
+}
+
 .column {
     float: left;
     width: 33.33%;
@@ -530,22 +557,152 @@ a{
 .block-2__row{
     overflow: hidden;
 }
-.block-2{
-    position: relative;
-}
-.block__info{
-    width: 516px;
-    padding: 35px 30px;
-    background: #fff;
-    box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
-    position: absolute;
-    top: -213px;
-    right: 0;
-    z-index: 1;
-}
+
 .block__info h2{
     font-size: 40px;
     margin-bottom: 35px;
 }
 
+.block2__text3{
+    text-align: center;
+}
+
+.block-3{
+    padding-top: 123px;
+}
+.block-3__header{
+    font-size: 50px;
+    color: #252525;
+    font-weight: 700;
+    margin-bottom: 80px;
+    text-align: center;
+}
+.block-3__table{
+    max-width: 1030px;
+    margin: 0 auto;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+   
+}
+.block-3__table__header{
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+.block-3__table__header th{
+    height: 73px;
+    background: #a3cc40;
+    vertical-align: middle;
+    text-align: left;
+}
+.block-3__table__header a{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+.block-3__oddline{
+    background:  #373737;
+}
+.block-3__evenline{
+    background: #4b4d4f;
+}
+.block-3__tbody td{
+    vertical-align: top;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    height: 75px;
+}
+.block-3__table .block-3__table__firstcolumn{
+    width: 230px;
+    text-align: center;
+}
+.block-3__table__secondcolumn{
+    width: 295px;
+    padding-left: 38px;
+}
+.block-3__table__thirdcolumn{
+    width: 295px;
+    padding-left: 38px;
+}
+.block-3__table .block-3__table__fouthcolumn{
+    width: 130px;
+    text-align: center;
+    vertical-align: middle;
+}
+.block-3 p{
+    max-width: 830px;
+    margin: 35px auto 0;
+    text-align: center;
+}
+.block-4 {
+    margin-top: 85px;
+    padding: 260px 0 160px;
+    background: url("../images/b4_bg.jpg")  no-repeat top center / cover;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden; 
+}
+.block-4__logo img {
+    display: block;
+}
+
+.block-4__inner {
+    position: relative;
+}
+.block-4:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 100vw solid transparent;
+    border-top: 5.55rem solid #fff;
+}
+.block-4:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-left: 100vw solid transparent;
+    border-bottom: 5.55rem solid #fff;
+}
+
+.block-4__logo{
+    position: absolute;
+    border-radius: 110%;
+    box-shadow: 10.5px 18.187px 12px 0px #000;
+    left: 0;
+    overflow: hidden;
+    top: -260px;
+}
+.block-4__text{
+    width: 75%;
+    margin-left: auto;
+    text-align: right;
+    color: #fff;
+}
+.block-4__header{
+    margin-bottom: 60px;
+}
+.block-4__button{
+    display: inline-block;
+    background: #90d23d;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 18px;
+    border: 2px solid #90d23d;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.block-4__button:hover {
+    color: #90d23d;
+    background: transparent;
+}
+
+
+  
   
