@@ -424,50 +424,77 @@ p{
     line-height: 1.2;
     margin-top: 19px;
 }
-/* p + p: {
-    margin-top: 19px;
-} */
+
 a{
     text-decoration: none;
 }
+
 .top-block{
     background: url(../images/top_bg.jpg) no-repeat top center / cover;
-    /* background-color: #000;
-    background-position: center;  
-    background-repeat: no-repeat;
-    background-size: 100%; 
-    
-    padding-top: 53px;
-    padding-bottom: 366px; 
-    margin-bottom: 84px; 
-    position: relative;
-    overflow: hidden; */
     min-height: 100vh;
     position: relative;
     overflow: hidden;
 }
+.top-block:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-left: 100vw solid transparent;
+    border-bottom: 5.55rem solid #fff;
+}
 
 .content{
     width: 1030px;
-    margin: auto;
-    
+    margin: auto; 
 }
 
-    /* margin-bottom: 210px; */
-}
-.logo{
+
+.logo__menu > div{
     float: left;
-    position: absolute;   
+    margin-top: 55px;
 }
-.menu{
-    position: absolute;
-    float: left;
-    margin-left: 410px;
-    line-height: 50px;
+
+
+.logo__menu__col1{
+    width: 25%;
 }
+.logo__menu__col2{
+    width: 50%;
+    margin: 0 0 0 90px;
+}
+.logo__menu__col3{
+    width: 15%;
+    text-align: right;
+    padding: 2px 0 0 25px;
+}
+.top-block__nav{
+    padding: 22px 0 0;
+}
+
 .menu__item{
-    float: left;
-    margin-left: 38px;
+    display: inline-block;
+}
+.menu__link{
+    font-size: 15px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color:#fff;
+}
+.logo__menu__col3 p span{
+    font-size: 15px;
+    color: #fff;
+    font-weight: 100;
+}
+.logo__menu__col3 p a{
+    border-bottom: 1px solid #fff;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 100;
+}
+
+.menu__item{
+    margin-left: 29px;
 }
 .menu__link{
     font-size: 15px;
@@ -476,6 +503,7 @@ a{
     color:#fff;
 }
 .descriptors{
+    padding: 265px 0 217px;
     text-align: center;
 }
 .descriptors__one{
@@ -487,25 +515,10 @@ a{
     font-size: 50px;
     color: #fff;
 }
-/* .top-block:after{
-    content: "";
-    position: absolute;
-    width: 120%;
-    background: #fff;
-    transform: rotate(-3.5deg);
-    bottom: 104px;
-    left: 0;
-    right: 0;
-    height: 170px;
-} */
-.top-block:after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-left: 100vw solid transparent;
-    border-bottom: 5.55rem solid #fff;
-}
+
+
+
+
 
 .block-2{
     width: 1030px;
@@ -701,6 +714,112 @@ a{
     background: transparent;
 }
 
+.block-5{
+    margin-top: 92px;;
+}
+.block-5__header{
+    margin: 0 0 30px;
+}
+.block-5__simple__text{
+    margin: 0 0 60px;
+    max-width: 70%;
+}
 
-  
+.block-5__flex{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -18px;
+}
+.block-5__item{
+    padding: 19px;
+}
+.block-5__flex__inner{
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+}
+.block-5__description{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;;
+    bottom: -100%;
+    background: rgba(144, 210, 61, .8);
+    border-radius: 14px;
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+}
+.block-5__item:hover .block-5__description{
+    bottom: 0;
+}
+.block-5__text1{
+    font-size: 35px;
+    font-weight: 900;
+    color: #fff;
+    margin: 0 0 11px;
+}
+.block-5__hr{
+    width: 80px;
+    height: 6px;
+    border: 0;
+    box-shadow: none;
+    background: #fff;
+    margin: 0 0 14px;
+}
+.block-5__text2{
+    font-size: 18px;
+    color: #fff;
+    flex: 1;
+    margin-top: 0;
+}
+
+.block-6{
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.block-7{
+    background: #90d23d;
+    padding: 50px 0;
+}
+
+.block-7__inner{
+    display: flex;
+    width: 290px;
+    margin: 0 auto;
+}
+.block-7__svg{
+    width: 20%;
+}
+.block-7__text{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-top: 11px;
+}
+.block-7 p+p{
+    margin: 0 auto;
+}
+.form__container{
+    max-width: 450px;
+    padding: 25px;
+}
+.block-8__item{
+    margin: 0 0 20px;
+}
+.block-8__input1{
+    font-size: 19px;
+    color: #6c6c6c;
+    padding: 15px 11px;
+    border: 1px solid #bebebe;
+    border-radius: 5px;
+    width: 100%;
+    transition: .2s;
+}
+.block-8__input1:focus{
+    border-color: #90d23d;
+}
+
   
