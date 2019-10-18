@@ -742,7 +742,10 @@ a{
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 40px;
     grid-row-gap: 40px;
-}   
+    grid-template-areas: "block-5__movie1 block-5__movie2 block-5__movie3"
+                         "block-5__movie1 block-5__movie2 block-5__movie3"
+                         "block-5__movie1 block-5__movie2 block-5__movie3";
+}       
 .block-5__item{
     /* padding: 19px; */
 }
