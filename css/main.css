@@ -399,7 +399,7 @@ textarea {
 
 html{
     box-sizing: border-box;
-    font-size: 20px;
+    font-size: 1.04vw;
 }
 *, *:before, *:after{
     box-sizing: inherit;   
@@ -670,6 +670,8 @@ a{
 }
 .block-4__logo img {
     display: block;
+    height: 15rem;
+    width: 15rem;
 }
 
 .block-4__inner {
