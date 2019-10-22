@@ -568,6 +568,18 @@ a{
     bottom: 0;
     margin: auto;
 }
+.image__big__screen img{
+    height: 10.35rem;
+    width: 9.4rem;
+}
+.image__surround__sound img{
+    height: 10.55rem;
+    width: 9.95rem;
+}
+.image__comf__chair img{
+    height: 9.05rem;
+    width: 9.8rem;
+}
 .block-2__img:hover{
     transform: scale(1.07);
 }
@@ -756,6 +768,7 @@ a{
     visibility: hidden;
 }
 
+
 .block-5__item{
     /* padding: 19px; */
 }
@@ -764,6 +777,10 @@ a{
     position: relative;
     overflow: hidden;
     border-radius: 0.7rem;
+}
+.block-5__poster img{
+    height: 14.8rem;
+    width: 14.8rem;
 }
 .block-5__description{
     position: absolute;
