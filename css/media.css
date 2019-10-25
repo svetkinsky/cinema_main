@@ -1,0 +1,47 @@
+@media (max-width: 1200px){
+    p{
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 1000px){
+    html{
+        font-size: 14px;
+    }
+}
+@media (max-width: 800px){
+    .content{
+        width: 40rem;
+    }
+    .logo__menu__col1 {
+        width: 14%;
+    }
+    .logo__menu__col2{
+        margin: 0px 0 0 4rem;
+        width: 59%;
+    }
+    .menu__item {
+        margin-left: 0.8rem;
+    }
+    .logo__menu__col1 img {
+        height: 1.91rem;
+        width: 8rem;
+    }
+    .logo__menu__col3{
+        padding: 0;
+        width: 17%;
+    }
+    h1 {
+        font-size: 3.8rem;
+    }
+    .descriptors__two {
+        font-size: 2.2rem;
+    }
+    .top-block {
+        min-height: 0;
+    }
+    .block2__info {
+        width: 57%;
+        top: -17.75rem;
+
+}
+

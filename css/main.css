@@ -399,7 +399,7 @@ textarea {
 
 html{
     box-sizing: border-box;
-    font-size: 1.04vw;
+    font-size: 1.46vw;
 }
 *, *:before, *:after{
     box-sizing: inherit;   
@@ -434,6 +434,7 @@ a{
 
 .top-block{
     background: url(../images/top_bg.jpg) no-repeat top center / cover;
+    background-size: cover;
     min-height: 125vh;
     position: relative;
     overflow: hidden;
@@ -449,7 +450,7 @@ a{
 
 .content{
     width: 51.5rem;
-    margin: auto; 
+    margin: 0 auto; 
 }
 
 
@@ -461,6 +462,10 @@ a{
 
 .logo__menu__col1{
     width: 25%;
+}
+.logo__menu__col1 img{
+    height: 2.25rem;
+    width: 9.4rem;
 }
 .logo__menu__col2{
     width: 50%;
@@ -527,6 +532,7 @@ a{
     width: 51.5rem;
     margin: auto;
     min-height: 100vh;
+    padding-top: 10rem
 }
 
 .block-2__pluses{
@@ -543,7 +549,7 @@ a{
     background: #fff;
     box-shadow: 0 0.05rem 0.1rem 0 rgba(35, 31, 32, 0.65);
     position: absolute;
-    top: -10.65rem;
+    top: -18rem;
     right: 0;
     z-index: 1;
 }
