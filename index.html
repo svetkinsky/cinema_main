@@ -12,6 +12,9 @@
     <link rel="stylesheet" media="screen and (color)" href="css/media.css"/>
     <link href="css/icons.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
 </head>
 
 <body>
@@ -121,9 +124,9 @@
                 </thead>
                 <tbody class="block-3__tbody">
                     <tr class="block-3__oddline">
-                        <td class="block-3__table__firstcolumn">10:00</td>
-                        <td class="block-3__table__secondcolumn">Человек-паук</td>
-                        <td class="block-3__table__thirdcolumn">фантастика, боевик, приключения</td>
+                        <td id="start__film1" class="block-3__table__firstcolumn"></td>
+                        <td id="name__film1" class="block-3__table__secondcolumn"></td>
+                        <td id="ganar__film1" class="block-3__table__thirdcolumn"></td>
                         <td class="block-3__table__fouthcolumn">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 width=1.65rem height=1.65rem viewBox="0 0 33 33">
@@ -133,9 +136,9 @@
                         </td>
                     </tr>
                     <tr class="block-3__evenline">
-                        <td class="block-3__table__firstcolumn">12:00</td>
-                        <td class="block-3__table__secondcolumn">Собачья жизнь 2</td>
-                        <td class="block-3__table__thirdcolumn">фэнтези, драма, комедия</td>
+                        <td id="start__film2" class="block-3__table__firstcolumn"></td>
+                        <td id="name__film2" class="block-3__table__secondcolumn"></td>
+                        <td id="ganar__film2" class="block-3__table__thirdcolumn"></td>
                         <td class="block-3__table__fouthcolumn">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 width=1.65rem height=1.65rem viewBox="0 0 33 33">
@@ -145,9 +148,9 @@
                         </td>
                     </tr>
                     <tr class="block-3__oddline">
-                        <td class="block-3__table__firstcolumn">14:00</td>
-                        <td class="block-3__table__secondcolumn">История игрушек 4</td>
-                        <td class="block-3__table__thirdcolumn">мультфильм, фэнтези, комедия</td>
+                        <td id="start__film3" class="block-3__table__firstcolumn"></td>
+                        <td id="name__film3" class="block-3__table__secondcolumn"></td>
+                        <td id="ganar__film3" class="block-3__table__thirdcolumn"></td>
                         <td class="block-3__table__fouthcolumn">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 width=1.65rem height=1.65rem viewBox="0 0 33 33">
@@ -157,9 +160,9 @@
                         </td>
                     </tr>
                     <tr class="block-3__evenline">
-                        <td class="block-3__table__firstcolumn">16:00</td>
-                        <td class="block-3__table__secondcolumn">Люди в черном: Интернэшнл</td>
-                        <td class="block-3__table__thirdcolumn">фантастика, боевик, комедия</td>
+                        <td id="start__film4" class="block-3__table__firstcolumn"></td>
+                        <td id="name__film4" class="block-3__table__secondcolumn"></td>
+                        <td id="ganar__film4" class="block-3__table__thirdcolumn"></td>
                         <td class="block-3__table__fouthcolumn">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             width=1.65rem height=1.65rem viewBox="0 0 33 33">
@@ -209,7 +212,7 @@
                 alias, animi, commodi eius ipsum,
                 laudantium neque nihil omnis perferendis sed sequi tempore! Ad ea esse ex inventore repudiandae,
                 suscipit!</p>
-            <div class="block-5__flex">
+            <div class="block-5__flex owl-carousel">
                 <div class="block-5__item block-5__movie1">
                     <div class="block-5__flex__inner">
                         <div class="block-5__poster">
@@ -988,7 +991,7 @@
         <div class="form__container">
             <form class="block-8__form" action="order.php">
                 <div class="block-8__item">
-                    <input class="block-8__input1" placeholder="Имя*" required />
+                    <input id="name__guest" class="block-8__input1" placeholder="Имя*" required />
                 </div>
                 <div class="block-8__item">
                     <input class="block-8__input1" type="email" placeholder="Адрес электронной почты" />
@@ -1026,12 +1029,37 @@
                     <input type="file" />
                 </div>
                 <div class="block-8__item">
-                    <button type="submit">Заказать</button>
+                    <button id="sendPresentInfo" type="submit">Заказать</button>
                 </div>
         </div>
         </form>
     </div>
     </div>
+
+
+    <script src="../js/films.js"></script>
+    <script src="../js/getPresent.js"></script>
+
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        })
+    </script>
 
 </body>
 
