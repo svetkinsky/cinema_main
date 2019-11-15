@@ -1,12 +1,46 @@
 
-let name_guest = document.getElementById('name__guest')
-let button_send_info = document.getElementById('sendPresentInfo')
+let buttonShowModalPresent = document.getElementById('getPresentModal')
+let modalPresentWindow = document.getElementById('modalPresent')
+let closePresentWindow = document.getElementById('closeModalPresent')
+let sendPresentInfo = document.getElementById('sendPresentInfo')
 
-console.log('до нажатия кнопки Заказать', name_guest.value)
-
-button_send_info.onclick = function(){
-    let name = name_guest.value
-    console.log('Имя', name)
+buttonShowModalPresent.onclick = function(){
+    modalPresentWindow.style.display = 'block'
 }
 
-// console.log(button_send_info)
+closePresentWindow.onclick = function(){
+    modalPresentWindow.style.display = 'none'
+}
+
+sendPresentInfo.onclick = function(){
+    let nameGuest = document.getElementById('name__guest')
+    let selectGuest = document.getElementById('select__guest')
+
+    if(nameGuest.value){
+        console.log('nameGuest', nameGuest.value)
+        nameGuest.style.border = '0.05rem solid #bebebe'
+    } else{
+        nameGuest.style.border = '.05rem solid red'
+    }
+
+    if(selectGuest.value != 0){
+        console.log('selectGuest', selectGuest.value)
+        selectGuest.style.border = '0.05rem solid #bebebe'
+    } else{
+        selectGuest.style.border = '.05rem solid red'
+    }  
+    
+    if(selectGuest.value != 0 && nameGuest.value){
+        modalPresentWindow.style.display = 'none'
+    }
+}
+
+let nameGuest = document.getElementById('name__guest')
+nameGuest.onchange = function(){
+    console.log(nameGuest.value)
+}
+
+let selectGuest = document.getElementById('select__guest')
+selectGuest.onchange = function(){
+    console.log(selectGuest.value)
+}

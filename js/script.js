@@ -33,3 +33,7 @@ table.innerHTML += tr
     
 }
 
+
+
+
+

@@ -501,6 +501,70 @@ a{
     font-weight: 100;
 }
 
+.menu__icon {
+    display: none;
+    width: 2.25rem;
+    height: 1.75rem;
+    position: absolute;
+    cursor: pointer;
+    top: 1.2rem;
+    left: 1.2rem;
+}
+
+.menu__icon span {
+    display: block;
+    position: absolute;
+    height: 0.3rem;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 0.45rem;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.menu__icon span:nth-child(1) {
+    top: 0;
+}
+
+.menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
+    top: .65rem;
+}
+
+.menu__icon span:nth-child(4) {
+    top: 1.3rem;
+}
+
+
+
+
+.top-block__nav.menu_state_open .menu__icon span:nth-child(1) {
+    top: .9rem;
+    width: 0%;
+    left: 50%;
+  }
+  
+.top-block__nav.menu_state_open .menu__icon span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+  
+.top-block__nav.menu_state_open  .menu__icon span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  
+.top-block__nav.menu_state_open  .menu__icon span:nth-child(4) {
+    top: .9rem;
+    width: 0%;
+    left: 50%;
+  }
+  
+.top-block__nav.menu_state_open .menu__list {
+    display: inline-block;  
+  }
+
+
+
 .menu__item{
     margin-left: 1.4rem;
 }
@@ -645,12 +709,15 @@ a{
     color: #fff;
     text-decoration: none;
 }
-.block-3__oddline{
+
+.block-3__tbody tr:nth-child(odd){
     background:  #373737;
 }
-.block-3__evenline{
+
+.block-3__tbody tr:nth-child(even){
     background: #4b4d4f;
 }
+
 .block-3__tbody td{
     vertical-align: middle;
     color: #fff;
@@ -682,7 +749,6 @@ a{
     text-align: center;
 }
 .block-4 {
-    /* margin-top: 85px; */
     padding: 13rem 0 8rem;
     background: url("../images/b4_bg.jpg")  no-repeat top center / cover;
     position: relative;
@@ -878,5 +944,34 @@ a{
 .block-8__input1:focus{
     border-color: #90d23d;
 }
+.block-8__textarea{
+    width: 100%;
+}
 
+#modalPresent{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 10rem;
+}
+
+#modalPresent .form__container{
+    width: 30rem;
+    background: #fff;
+    margin: auto;
+    border-radius: 1rem;
+    position: relative;
+}
+#closeModalPresent{
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    font-size: .75rem;
+    cursor: pointer;
+}
   
