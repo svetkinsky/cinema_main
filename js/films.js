@@ -200,6 +200,9 @@ function order(event){
 function placeToggle(event){
     let el = event.target
     if(el.classList.contains('placeFree')){
+        if (el.classList.contains('placeSelect')){
+            el.classList.remove('placeSelect')
+        }
         el.classList.remove('placeFree')
         el.classList.add('placeBrone')
     }
@@ -216,25 +219,29 @@ function placeContext(event){
 function placeHover(event){
 
     let el = event.target
+    console.log(el)
     if(el.classList.contains('placeFree')){
-        if(event.type == 'mouseout')
+        if(event.type == 'mouseover')
         {
             el.classList.add('placeSelect')
+            console.log(el.className)
+        }
+
+    }
+}
+
+function placeHoverOut(event){
+    let el = event.target
+    console.log(el)
+    if(el.classList.contains('placeFree')){
+        if(event.type == 'mouseout')
+        {   
+            el.classList.remove('placeSelect')
+            //el.classList.add('')
             console.log(el)
         }
     }
 }
-
-// function placeHoverOut(event){
-//     let el = event.target
-//     if(el.classList.contains('placeFree')){
-//         if(event.type == 'mouseout')
-//         {
-//             el.classList.add(' ')
-//             console.log(el)
-//         }
-//     }
-// }
 
 
 
@@ -254,7 +261,8 @@ for(place of places){
     placeDiv.addEventListener('click', order)
     placeDiv.addEventListener('click', placeToggle)
     placeDiv.oncontextmenu = placeContext
-    placeDiv.onmouseout = placeHover
+    placeDiv.onmouseover = placeHover
+    placeDiv.onmouseout = placeHoverOut
 
     //placeDiv.addEventListener('oncontextmenu', placeContext)
 
@@ -370,6 +378,18 @@ for(let i = 0; i < filmsHire.length; i++){
         orderFilmName.innerHTML = filmName
         orderFilmStart.innerHTML = filmStart
         orderFilmGanar.innerHTML = filmGanar
+
+        let orderFilmPrice = document.getElementById('orderFilmPrice')
+        let orderFilmCountTiket = document.getElementById('orderFilmCountTiket')
+        let orderNumberPlace = document.getElementById('orderNumberPlace')
+        let orderFilmTotalPrice = document.getElementById('orderFilmTotalPrice')
+
+        orderFilmPrice.innerHTML = ''
+        orderFilmCountTiket.innerHTML = ''
+        orderNumberPlace.innerHTML = ''
+        orderFilmTotalPrice.innerHTML = ''        
+
+
         //orderFilmPrice.innerHTML = filmPrice
         //console.log(this)
 
