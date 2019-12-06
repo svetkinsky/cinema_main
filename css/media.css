@@ -82,6 +82,9 @@
         flex-wrap: wrap;
         text-align: center;
     }
+    .block-3__table__header{
+        font-size: 1.2rem;
+    }
 }
 @media (max-width: 600px){
     h1{
@@ -121,6 +124,9 @@
     }
     .logo__menu__col3{
         display: none;
+    }
+    .inner__table{
+        overflow: auto;
     }
 }
 

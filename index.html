@@ -127,23 +127,23 @@
     <div id="films" class="block-3">
         <div class="content">
             <h2 class="block-3__header">Выберите фильм</h2>
+            <div class="inner__table">
+                <table class="block-3__table">
+                    <thead class="block-3__table__header">
+                        <tr>
+                            <th class="block-3__table__firstcolumn">Начало сеанса <a href="#"><i
+                                        class="icon icon-up "></i></a></th>
+                            <th class="block-3__table__secondcolumn">Название фильма <a href="#"><i
+                                        class="icon icon-down"></i></a></th>
+                            <th class="block-3__table__thirdcolumn">Жанр</th>
+                            <th class="block-3__table__fouthcolumn">Цена билета</th>
+                        </tr>
+                    </thead>
+                    <tbody id="filmsHire" class="block-3__tbody">
 
-            <table class="block-3__table">
-                <thead class="block-3__table__header">
-                    <tr>
-                        <th class="block-3__table__firstcolumn">Начало сеанса <a href="#"><i
-                                    class="icon icon-up "></i></a></th>
-                        <th class="block-3__table__secondcolumn">Название фильма <a href="#"><i
-                                    class="icon icon-down"></i></a></th>
-                        <th class="block-3__table__thirdcolumn">Жанр</th>
-                        <th class="block-3__table__fouthcolumn"></th>
-                    </tr>
-                </thead>
-                <tbody id="filmsHire" class="block-3__tbody">
-
-                </tbody>
-            </table>
-
+                    </tbody>
+                </table>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eum facere obcaecati quam rem
                 repellendus
                 veritatis. Aliquam beatae, delectus dignissimos enim exercitationem mollitia nisi pariatur quaerat quam,
@@ -1019,14 +1019,67 @@
                         <input type="file" />
                     </div> -->
                 <div class="block-8__item">
-                    <button id="sendPresentInfo" type="submit">Заказать</button>
+                    <button class="button" id="sendPresentInfo" type="submit">Заказать</button>
                 </div>
             </div>
             <!-- </form> -->
         </div>
     </div>
 
+   <!-- </div>  -->
+
+
+
+    <div id="orderForm">
+        <div class="form__container">
+                <div id="closeOrderForm">X</div>
+                <div>
+                    <span>Название фильма:</span>
+                    <span class="orderInnerFilm" id="orderFilmName"></span>
+                </div>
+                <div>
+                    <span>Начало сеанса:</span>
+                    <span class="orderInnerFilm" id="orderFilmStart"></span>
+                </div>
+                <div>
+                    <span>Жанр:</span>
+                    <span class="orderInnerFilm" id="orderFilmGanar"></span>
+                </div>
+                <div>
+                    <span>Цена билета:</span>
+                    <span class="orderInnerFilm" id="orderFilmPrice" value="0"></span>
+                </div>
+                <div>
+                    <span>Количество билетов:</span>
+                    <span class="orderInnerFilm" value="0" id="orderFilmCountTiket"></span>
+                </div>
+                <div>
+                    <span>Выбранные места:</span>
+                    <span class="orderInnerFilm" id="orderNumberPlace" value="0"></span>
+                </div>
+                <div>
+                    <span>Общая стоимость билетов:</span>
+                    <span class="orderInnerFilm" id="orderFilmTotalPrice" value="0"></span> 
+                </div>
+                <div>
+                    <span>Номер телефона:</span>
+                    <input class="block-8__input1" type="text" id="orderFilmPhone"/>
+                </div>
+                <div>
+                    <span>Имя:</span>
+                    <input class="block-8__input1" type="text" id="orderClientName"/>
+                </div>
+
+                <div class="block-8__item">
+                    <button class="button" id="sendOrder" type="submit">Забронировать</button>
+                </div>
+                <div class="places"></div>
+
+            </div> 
+        </div>
     </div>
+
+
 
 
     <!-- <script src="../js/script.js"></script> -->
@@ -1034,6 +1087,7 @@
     <script src="../js/getPresent.js"></script>
 
     <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/jquery.maskedinput.min.js"></script>
     <script src="../js/owl.carousel.min.js"></script>
     <script>
         $('.owl-carousel').owlCarousel({
@@ -1062,6 +1116,12 @@
                     });
                 });
             })(jQuery);
+    </script>
+
+    <script>
+        $(function(){
+            $("#orderFilmPhone").mask("+7(999) 999-9999");
+        })
     </script>
 
 </body>

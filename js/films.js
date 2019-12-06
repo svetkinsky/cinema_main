@@ -1,59 +1,3 @@
-
-// const ganar_1 ='фантастика' 
-// const ganar_2 = 'боевик'
-// const ganar_3 = 'приключения'
-// const ganar_4 = 'фэнтези'  
-// const ganar_5 = 'драма'
-// const ganar_6 = 'комедия'
-// const ganar_7 = 'мультфильм'
-
-// let start_film_1 = '10:00'
-// let start_film_2 = '12:00'
-// let start_film_3 = '14:00'
-// let start_film_4 = '16:00'
-
-// let name_film_1 = 'Человек-паук'
-// let name_film_2 = 'Собачья жизнь 2'
-// let name_film_3 = 'История игрушек 4'
-// let name_film_4 = 'Люди в черном: Интернэшнл'
-
-// let ganar_film_1 = ganar_1 + ' ' + ganar_2 + ' ' + ganar_3
-// let ganar_film_2 = ganar_4 + ' ' + ganar_5 + ' ' + ganar_6
-// let ganar_film_3 = ganar_7 + ' ' + ganar_4 + ' ' + ganar_6
-// let ganar_film_4 = ganar_1 + ' ' + ganar_2 + ' ' + ganar_6
-
-// let element_start_film1 = document.getElementById('start__film1')
-// let element_name_film1 = document.getElementById('name__film1')
-// let element_ganar_film1 = document.getElementById('ganar__film1')
-
-// element_start_film1.innerHTML = start_film_1
-// element_name_film1.innerHTML = name_film_1
-// element_ganar_film1.innerHTML = ganar_film_1
-
-// let element_start_film2 = document.getElementById('start__film2')
-// let element_name_film2 = document.getElementById('name__film2')
-// let element_ganar_film2 = document.getElementById('ganar__film2')
-
-// element_start_film2.innerHTML = start_film_2
-// element_name_film2.innerHTML = name_film_2
-// element_ganar_film2.innerHTML = ganar_film_2
-
-// let element_start_film3 = document.getElementById('start__film3')
-// let element_name_film3 = document.getElementById('name__film3')
-// let element_ganar_film3 = document.getElementById('ganar__film3')
-
-// element_start_film3.innerHTML = start_film_3
-// element_name_film3.innerHTML = name_film_3
-// element_ganar_film3.innerHTML = ganar_film_3
-
-// let element_start_film4 = document.getElementById('start__film4')
-// let element_name_film4 = document.getElementById('name__film4')
-// let element_ganar_film4 = document.getElementById('ganar__film4')
-
-// element_start_film4.innerHTML = start_film_4
-// element_name_film4.innerHTML = name_film_4
-// element_ganar_film4.innerHTML = ganar_film_4
-
 //Тестовые данные (заглушка, моковые данные, стабы) - ответ от сервиса фильмов
 
 films = [
@@ -63,6 +7,7 @@ films = [
         ganar: [0, 1, 2],
         hire: true,
         new: false,
+        price: 310,
         description: 'Ad ea esse ex inventore repudiandae, suscipit!',
         image: '../images/mov1.jpg',
         facebookLink: 'http://fb.com',
@@ -74,6 +19,7 @@ films = [
         ganar: [3, 4, 5],
         hire: true,
         new: false,
+        price: 320,
         description: 'Ad ea esse ex inventore repudiandae, suscipit!',
         image: '../images/mov2.jpg',
         facebookLink: 'http://fb.com',
@@ -85,6 +31,7 @@ films = [
         ganar: [6, 3, 5],
         hire: true,
         new: false,
+        price: 330,
         description: 'Ad ea esse ex inventore repudiandae, suscipit!',
         image: '../images/mov3.jpg',
         facebookLink: 'http://fb.com',
@@ -96,6 +43,7 @@ films = [
         ganar: [0, 1, 5],
         hire: true,
         new: false,
+        price: 340,
         description: 'Ad ea esse ex inventore repudiandae, suscipit!',
         image: '../images/mov4.jpg',
         facebookLink: 'http://fb.com',
@@ -149,6 +97,194 @@ const ganars = [
 ]
 
 
+
+
+// const places = [
+//     place1 = {
+//         number: 1,
+//         price: 100,
+//         brone: true,
+//     },
+//     place2 = {
+//         number: 2,
+//         price: 100,
+//         brone: true,
+//     },
+//     place3 = {
+//         number: 3,
+//         price: 100,
+//         brone: true,
+//     },
+//     place4 = {
+//         number: 4,
+//         price: 100,
+//         brone: false,
+//     },
+//     place5 = {
+//         number: 5,
+//         price: 100,
+//         brone: true,
+//     },
+//     place6 = {
+//         number: 6,
+//         price: 100,
+//         brone: false,
+//     },
+//     place7 = {
+//         number: 7,
+//         price: 100,
+//         brone: false,
+//     },
+//     place8 = {
+//         number: 8,
+//         price: 100,
+//         brone: false,
+//     },
+//     place9 = {
+//         number: 9,
+//         price: 100,
+//         brone: true,
+//     },
+//     place10 = {
+//         number: 10,
+//         price: 100,
+//         brone: true,
+//     },
+// ]
+
+const countPlace = 10
+let places = []
+
+for(let i = 0; i < countPlace; i++ ){
+    let random = Math.round(0 - 0.5 + Math.random() * 2)
+    places[i] = {
+        number: i + 1,
+        price: (i + 1) > 3 && (i + 1) < 8 ? 150 : 100,
+        brone: random == 1 ? true : false,
+    }
+    
+}
+
+//console.log(places)
+
+
+
+let placesHTML = document.querySelector('.places')
+let cinemaHall = document.createElement('div')
+cinemaHall.classList.add('hall')
+
+//console.log(placesHTML) 
+
+//Создание квадратиков мест
+
+
+function order(event){
+    let el = event.target
+    let orderNumberPlace = document.getElementById('orderNumberPlace')
+    let orderSelect = orderNumberPlace.innerHTML
+    let orderFilmCountTiket = document.getElementById('orderFilmCountTiket')
+    let countTiket = orderFilmCountTiket.innerHTML
+    let orderFilmPrice = document.getElementById('orderFilmPrice')
+    let orderFilmTotalPrice = document.getElementById('orderFilmTotalPrice')
+    let orderTotalPrice = orderFilmTotalPrice.innerHTML
+    if(el.classList.contains('placeFree')){
+        countTiket++
+        orderFilmCountTiket.innerHTML = countTiket
+        orderNumberPlace.innerHTML = orderSelect + ' ' + el.innerHTML
+        orderFilmPrice.innerHTML = places[el.innerHTML - 1].price
+        orderFilmTotalPrice.innerHTML = Number(orderTotalPrice) + Number(places[el.innerHTML - 1].price)
+        //console.log(orderNumberPlace.innerHTML)  
+    }
+}
+
+function placeToggle(event){
+    let el = event.target
+    if(el.classList.contains('placeFree')){
+        el.classList.remove('placeFree')
+        el.classList.add('placeBrone')
+    }
+    //placeDiv.brone = true
+} 
+
+function placeContext(event){
+    event.preventDefault()
+    let el = event.target
+    alert('Стоимость билета: ' + places[el.innerHTML - 1].price)
+    
+}
+
+function placeHover(event){
+
+    let el = event.target
+    if(el.classList.contains('placeFree')){
+        if(event.type == 'mouseout')
+        {
+            el.classList.add('placeSelect')
+            console.log(el)
+        }
+    }
+}
+
+// function placeHoverOut(event){
+//     let el = event.target
+//     if(el.classList.contains('placeFree')){
+//         if(event.type == 'mouseout')
+//         {
+//             el.classList.add(' ')
+//             console.log(el)
+//         }
+//     }
+// }
+
+
+
+
+for(place of places){
+    let placeDiv = document.createElement('div') 
+    placeDiv.innerHTML = place.number
+    placeDiv.classList.add('placeDiv')
+
+    if(place.brone){
+        placeDiv.classList.add('placeBrone')
+       
+    } else{
+        placeDiv.classList.add('placeFree')
+    }
+
+    placeDiv.addEventListener('click', order)
+    placeDiv.addEventListener('click', placeToggle)
+    placeDiv.oncontextmenu = placeContext
+    placeDiv.onmouseout = placeHover
+
+    //placeDiv.addEventListener('oncontextmenu', placeContext)
+
+    
+    
+    //cinemaHall.insertAdjacentHTML('afterbegin', placeDiv)
+    cinemaHall.insertAdjacentElement('beforeend', placeDiv)
+    
+
+    
+    //console.log(place)
+}
+
+placesHTML.append(cinemaHall)
+
+// let orderPlace = document.getElementsByClassName('placeDiv')
+// console.log(orderPlace)
+
+
+
+//order()
+
+
+//orderPlace.addEventListener('click', order)
+
+
+
+
+
+
 //Для блока "Выберите фильм"
 let filmsHire = []
 
@@ -186,6 +322,9 @@ const film = {
         let strGanars = arrGanars.join(', ')
         return strGanars
     },
+    getPrice: function(){
+        return this.price
+    },
     getImage: function(){
         return this.image
     }, 
@@ -197,32 +336,76 @@ const film = {
     },
 }
 
+let orderForm = document.getElementById('orderForm')
+let closeOrderForm = document.getElementById('closeOrderForm')
+closeOrderForm.onclick = function(){
+    orderForm.style.display = 'none'
+}
+
 for(let i = 0; i < filmsHire.length; i++){
     const filmName = film.getName.bind(filmsHire[i])()
     const filmStart = film.getStart.bind(filmsHire[i])()
     const filmGanar = film.getGanar.bind(filmsHire[i])()
+    const filmPrice = film.getPrice.bind(filmsHire[i])()
     let filmsHireHtml = document.getElementById('filmsHire')
 
-    console.log(filmsHireHtml)
+    //console.log(filmsHireHtml)
 
     let filmHtml = `
         <td class="block-3__table__firstcolumn">${filmStart}</td>
         <td class="block-3__table__secondcolumn">${filmName}</td>
         <td class="block-3__table__thirdcolumn">${filmGanar}</td>
-        <td class="block-3__table__fouthcolumn">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns: xlink="http://www.w3.org/1999/xlink"
-                width=1.65rem height=1.65rem viewBox="0 0 33 33">
-        <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
-                d="M16.505,32.994 C7.393,32.994 0.005,25.607 0.005,16.494 C0.005,7.381 7.393,-0.006 16.505,-0.006 C25.618,-0.006 33.005,7.381 33.005,16.494 C33.005,25.607 25.618,32.994 16.505,32.994 ZM24.214,14.591 L18.356,14.631 L18.356,8.796 L13.958,8.777 L13.958,14.637 L8.083,14.637 L8.083,19.074 L13.958,19.074 L13.958,24.889 L18.336,24.889 L18.307,19.074 L24.231,19.074 L24.214,14.591 Z"/>
-            </svg>
-        </td>
-    `
+        <td class="block-3__table__fouthcolumn">${filmPrice}</td>`
 
     let tr = document.createElement('tr')
+    tr.className = 'strFilmHire'
     tr.innerHTML = filmHtml
-    filmsHireHtml.appendChild(tr)
+    tr.onclick = function(){
+        orderForm.style.display = 'block'
+        let orderFilmName = document.getElementById('orderFilmName')
+        let orderFilmStart = document.getElementById('orderFilmStart')
+        let orderFilmGanar = document.getElementById('orderFilmGanar')
+        //let orderFilmPrice = document.getElementById('orderFilmPrice')
 
+        orderFilmName.innerHTML = filmName
+        orderFilmStart.innerHTML = filmStart
+        orderFilmGanar.innerHTML = filmGanar
+        //orderFilmPrice.innerHTML = filmPrice
+        //console.log(this)
+
+        //let orderFilmTotalPrice = document.getElementById('orderFilmTotalPrice')
+        //let orderFilmCountTiket = document.getElementById('orderFilmCountTiket')
+
+       // orderFilmTotalPrice.innerHTML = filmPrice * orderFilmCountTiket.innerHTML
+
+        // orderFilmCountTiket.onchange = function(){
+        //     orderFilmTotalPrice.innerHTML = filmPrice * orderFilmCountTiket.value
+        // }
+    }
+
+
+
+    filmsHireHtml.appendChild(tr)
 }
+
+let sendOrder = document.getElementById('sendOrder')
+sendOrder.onclick = function(){
+    let orderClientName = document.getElementById('orderClientName')
+
+    if(nameGuest.value){
+        orderClientName.style.border = '0.05rem solid #bebebe'
+    } else{
+        orderClientName.style.border = '.05rem solid red'
+    }
+}
+
+
+
+//const listFilms = document.querySelectorAll('.strFilmHire')
+//console.log(listFilms)
+
+
+
 
 for(let i = 0; i < filmsNew.length; i++){
     const filmNameNew = film.getName.bind(filmsNew[i])()
@@ -231,7 +414,7 @@ for(let i = 0; i < filmsNew.length; i++){
     const filmImageNew = film.getImage.bind(filmsNew[i])()
     let filmNewHtml = document.getElementById('filmsNew')
 
-    console.log(filmNewHtml)
+    //console.log(filmNewHtml)
 
     let filmHtml = `<div class="block-5__item block-5__movie1">
             <div class="block-5__flex__inner">
@@ -309,3 +492,5 @@ for(let i = 0; i < filmsNew.length; i++){
             //filmNewHtml.innerHTML += filmHtml
 
 }
+
+
