@@ -203,8 +203,9 @@ function placeToggle(event){
         if (el.classList.contains('placeSelect')){
             el.classList.remove('placeSelect')
         }
-        el.classList.remove('placeFree')
-        el.classList.add('placeBrone')
+        // el.classList.remove('placeFree')
+        // el.classList.add('placeBrone')
+        
     }
     //placeDiv.brone = true
 } 

@@ -1026,61 +1026,61 @@
         </div>
     </div>
 
-   <!-- </div>  -->
+    <!-- </div>  -->
 
 
 
     <div id="orderForm">
         <div class="form__container">
-                <div id="closeOrderForm">X</div>
-                <div>
-                    <span>Название фильма:</span>
-                    <span class="orderInnerFilm" id="orderFilmName"></span>
-                </div>
-                <div>
-                    <span>Начало сеанса:</span>
-                    <span class="orderInnerFilm" id="orderFilmStart"></span>
-                </div>
-                <div>
-                    <span>Жанр:</span>
-                    <span class="orderInnerFilm" id="orderFilmGanar"></span>
-                </div>
-                <div>
-                    <span>Цена билета:</span>
-                    <span class="orderInnerFilm" id="orderFilmPrice" value="0"></span>
-                </div>
-                <div>
-                    <span>Количество билетов:</span>
-                    <span class="orderInnerFilm" value="0" id="orderFilmCountTiket"></span>
-                </div>
-                <div>
-                    <span>Выбранные места:</span>
-                    <span class="orderInnerFilm" id="orderNumberPlace" value="0"></span>
-                </div>
-                <div>
-                    <span>Общая стоимость билетов:</span>
-                    <span class="orderInnerFilm" id="orderFilmTotalPrice" value="0"></span> 
-                </div>
-                <div>
-                    <span>Номер телефона:</span>
-                    <input class="block-8__input1" type="text" id="orderFilmPhone"/>
-                </div>
-                <div>
-                    <span>Имя:</span>
-                    <input class="block-8__input1" type="text" id="orderClientName"/>
-                </div>
+            <div id="closeOrderForm">X</div>
+            <div>
+                <span>Название фильма:</span>
+                <span class="orderInnerFilm" id="orderFilmName"></span>
+            </div>
+            <div>
+                <span>Начало сеанса:</span>
+                <span class="orderInnerFilm" id="orderFilmStart"></span>
+            </div>
+            <div>
+                <span>Жанр:</span>
+                <span class="orderInnerFilm" id="orderFilmGanar"></span>
+            </div>
+            <div>
+                <span>Цена билета:</span>
+                <span class="orderInnerFilm" id="orderFilmPrice" value="0"></span>
+            </div>
+            <div>
+                <span>Количество билетов:</span>
+                <span class="orderInnerFilm" value="0" id="orderFilmCountTiket"></span>
+            </div>
+            <div>
+                <span>Выбранные места:</span>
+                <span class="orderInnerFilm" id="orderNumberPlace" value="0"></span>
+            </div>
+            <div>
+                <span>Общая стоимость билетов:</span>
+                <span class="orderInnerFilm" id="orderFilmTotalPrice" value="0"></span>
+            </div>
+            <div>
+                <span>Номер телефона:</span>
+                <input class="block-8__input1" type="text" id="orderFilmPhone" />
+            </div>
+            <div>
+                <span>Имя:</span>
+                <input class="block-8__input1" type="text" id="orderClientName" />
+            </div>
 
-                <div class="block-8__item">
-                    <button class="button" id="sendOrder" type="submit">Забронировать</button>
-                </div>
-                <div class="places"></div>
+            <div class="block-8__item">
+                <button class="button" id="sendOrder" type="submit">Забронировать</button>
+            </div>
+            <div class="places"></div>
 
-            </div> 
         </div>
+    </div>
     </div>
 
 
-
+    <div id="output"></div>
 
     <!-- <script src="../js/script.js"></script> -->
     <script src="../js/films.js"></script>
@@ -1089,6 +1089,14 @@
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/jquery.maskedinput.min.js"></script>
     <script src="../js/owl.carousel.min.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Your custom script here -->
+    <script type="text/babel">
+        const getMessage = () => "Hello World";
+       // document.getElementById('output').innerHTML = getMessage();
+    </script>
+
     <script>
         $('.owl-carousel').owlCarousel({
             loop: true,
@@ -1119,7 +1127,7 @@
     </script>
 
     <script>
-        $(function(){
+        $(function () {
             $("#orderFilmPhone").mask("+7(999) 999-9999");
         })
     </script>
