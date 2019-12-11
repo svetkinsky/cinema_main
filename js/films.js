@@ -99,195 +99,11 @@ const ganars = [
 
 
 
-// const places = [
-//     place1 = {
-//         number: 1,
-//         price: 100,
-//         brone: true,
-//     },
-//     place2 = {
-//         number: 2,
-//         price: 100,
-//         brone: true,
-//     },
-//     place3 = {
-//         number: 3,
-//         price: 100,
-//         brone: true,
-//     },
-//     place4 = {
-//         number: 4,
-//         price: 100,
-//         brone: false,
-//     },
-//     place5 = {
-//         number: 5,
-//         price: 100,
-//         brone: true,
-//     },
-//     place6 = {
-//         number: 6,
-//         price: 100,
-//         brone: false,
-//     },
-//     place7 = {
-//         number: 7,
-//         price: 100,
-//         brone: false,
-//     },
-//     place8 = {
-//         number: 8,
-//         price: 100,
-//         brone: false,
-//     },
-//     place9 = {
-//         number: 9,
-//         price: 100,
-//         brone: true,
-//     },
-//     place10 = {
-//         number: 10,
-//         price: 100,
-//         brone: true,
-//     },
-// ]
-
-const countPlace = 10
-let places = []
-
-for(let i = 0; i < countPlace; i++ ){
-    let random = Math.round(0 - 0.5 + Math.random() * 2)
-    places[i] = {
-        number: i + 1,
-        price: (i + 1) > 3 && (i + 1) < 8 ? 150 : 100,
-        brone: random == 1 ? true : false,
-    }
-    
-}
-
-//console.log(places)
-
-
-
-let placesHTML = document.querySelector('.places')
-let cinemaHall = document.createElement('div')
-cinemaHall.classList.add('hall')
-
-//console.log(placesHTML) 
-
-//Создание квадратиков мест
-
-
-function order(event){
-    let el = event.target
-    let orderNumberPlace = document.getElementById('orderNumberPlace')
-    let orderSelect = orderNumberPlace.innerHTML
-    let orderFilmCountTiket = document.getElementById('orderFilmCountTiket')
-    let countTiket = orderFilmCountTiket.innerHTML
-    let orderFilmPrice = document.getElementById('orderFilmPrice')
-    let orderFilmTotalPrice = document.getElementById('orderFilmTotalPrice')
-    let orderTotalPrice = orderFilmTotalPrice.innerHTML
-    if(el.classList.contains('placeFree')){
-        countTiket++
-        orderFilmCountTiket.innerHTML = countTiket
-        orderNumberPlace.innerHTML = orderSelect + ' ' + el.innerHTML
-        orderFilmPrice.innerHTML = places[el.innerHTML - 1].price
-        orderFilmTotalPrice.innerHTML = Number(orderTotalPrice) + Number(places[el.innerHTML - 1].price)
-        //console.log(orderNumberPlace.innerHTML)  
-    }
-}
-
-function placeToggle(event){
-    let el = event.target
-    if(el.classList.contains('placeFree')){
-        if (el.classList.contains('placeSelect')){
-            el.classList.remove('placeSelect')
-        }
-        // el.classList.remove('placeFree')
-        // el.classList.add('placeBrone')
-        
-    }
-    //placeDiv.brone = true
-} 
-
-function placeContext(event){
-    event.preventDefault()
-    let el = event.target
-    alert('Стоимость билета: ' + places[el.innerHTML - 1].price)
-    
-}
-
-function placeHover(event){
-
-    let el = event.target
-    console.log(el)
-    if(el.classList.contains('placeFree')){
-        if(event.type == 'mouseover')
-        {
-            el.classList.add('placeSelect')
-            console.log(el.className)
-        }
-
-    }
-}
-
-function placeHoverOut(event){
-    let el = event.target
-    console.log(el)
-    if(el.classList.contains('placeFree')){
-        if(event.type == 'mouseout')
-        {   
-            el.classList.remove('placeSelect')
-            //el.classList.add('')
-            console.log(el)
-        }
-    }
-}
 
 
 
 
-for(place of places){
-    let placeDiv = document.createElement('div') 
-    placeDiv.innerHTML = place.number
-    placeDiv.classList.add('placeDiv')
 
-    if(place.brone){
-        placeDiv.classList.add('placeBrone')
-       
-    } else{
-        placeDiv.classList.add('placeFree')
-    }
-
-    placeDiv.addEventListener('click', order)
-    placeDiv.addEventListener('click', placeToggle)
-    placeDiv.oncontextmenu = placeContext
-    placeDiv.onmouseover = placeHover
-    placeDiv.onmouseout = placeHoverOut
-
-    //placeDiv.addEventListener('oncontextmenu', placeContext)
-
-    
-    
-    //cinemaHall.insertAdjacentHTML('afterbegin', placeDiv)
-    cinemaHall.insertAdjacentElement('beforeend', placeDiv)
-    
-
-    
-    //console.log(place)
-}
-
-placesHTML.append(cinemaHall)
-
-// let orderPlace = document.getElementsByClassName('placeDiv')
-// console.log(orderPlace)
-
-
-
-//order()
-
-
-//orderPlace.addEventListener('click', order)
 
 
 
@@ -351,6 +167,83 @@ closeOrderForm.onclick = function(){
     orderForm.style.display = 'none'
 }
 
+const countPlace = 10
+let places = []
+
+
+
+function order(event){
+    let el = event.target
+    let orderNumberPlace = document.getElementById('orderNumberPlace')
+    let orderSelect = orderNumberPlace.innerHTML
+    let orderFilmCountTiket = document.getElementById('orderFilmCountTiket')
+    let countTiket = orderFilmCountTiket.innerHTML
+    let orderFilmPrice = document.getElementById('orderFilmPrice')
+    let orderFilmTotalPrice = document.getElementById('orderFilmTotalPrice')
+    let orderTotalPrice = orderFilmTotalPrice.innerHTML
+    if(el.classList.contains('placeFree')){
+        countTiket++
+        orderFilmCountTiket.innerHTML = countTiket
+        orderNumberPlace.innerHTML = orderSelect + ' ' + el.innerHTML
+        orderFilmPrice.innerHTML = places[el.innerHTML - 1].price
+        orderFilmTotalPrice.innerHTML = Number(orderTotalPrice) + Number(places[el.innerHTML - 1].price)
+        //console.log(orderNumberPlace.innerHTML)  
+    }
+}
+
+function placeToggle(event){
+    let el = event.target
+    if(el.classList.contains('placeFree')){
+        // if (el.classList.contains('placeSelect')){
+        //     el.classList.remove('placeSelect')
+        // }
+        el.classList.remove('placeFree')
+        el.classList.add('placeSelect')
+        
+    }
+    //placeDiv.brone = true
+} 
+
+function placeContext(event){
+    event.preventDefault()
+    let el = event.target
+    alert('Стоимость билета: ' + places[el.innerHTML - 1].price)
+    
+}
+
+function placeHover(event){
+
+    let el = event.target
+    //console.log(el)
+    if(el.classList.contains('placeFree')){
+        if(event.type == 'mouseover')
+        {
+            el.classList.add('placeHover')
+            //console.log(el.className)
+        }
+
+    }
+}
+
+function placeHoverOut(event){
+    let el = event.target
+    //console.log(el)
+    if(el.classList.contains('placeFree')){
+        if(event.type == 'mouseout')
+        {   
+            el.classList.remove('placeHover')
+            //el.classList.add('')
+            //console.log(el)
+        }
+    }
+}
+
+
+
+
+
+
+
 for(let i = 0; i < filmsHire.length; i++){
     const filmName = film.getName.bind(filmsHire[i])()
     const filmStart = film.getStart.bind(filmsHire[i])()
@@ -388,26 +281,97 @@ for(let i = 0; i < filmsHire.length; i++){
         orderFilmPrice.innerHTML = ''
         orderFilmCountTiket.innerHTML = ''
         orderNumberPlace.innerHTML = ''
-        orderFilmTotalPrice.innerHTML = ''        
+        orderFilmTotalPrice.innerHTML = ''  
+        
+        
+
+        
+        for(let i = 0; i < countPlace; i++ ){
+            let random = Math.round(0 - 0.5 + Math.random() * 2)
+            places[i] = {
+                number: i + 1,
+                price: (i + 1) > 3 && (i + 1) < 8 ? 150 : 100,
+                brone: random == 1 ? true : false,
+            }   
+        }
+
+        let placesHTML = document.querySelector('.places')
+        let cinemaHall = document.createElement('div')
+        cinemaHall.classList.add('hall')
+
+        placesHTML.innerHTML = ''
+        
+
+        for(place of places){
+            let placeDiv = document.createElement('div') 
+            placeDiv.innerHTML = place.number
+            placeDiv.classList.add('placeDiv')
+            
+            
+
+            if(place.brone){
+                placeDiv.classList.add('placeBrone')
+               
+            } else{
+                placeDiv.classList.add('placeFree')
+            }
+        
+            placeDiv.addEventListener('click', order)
+            placeDiv.addEventListener('click', placeToggle)
+            placeDiv.oncontextmenu = placeContext
+            placeDiv.onmouseover = placeHover
+            placeDiv.onmouseout = placeHoverOut
+        
+            //placeDiv.addEventListener('oncontextmenu', placeContext)
+        
+            
+            
+            //cinemaHall.insertAdjacentHTML('afterbegin', placeDiv)
+            cinemaHall.insertAdjacentElement('beforeend', placeDiv)
+            
+        
+            
+            //console.log(place)
+        }
+        
+        placesHTML.append(cinemaHall)
+        
 
 
-        //orderFilmPrice.innerHTML = filmPrice
-        //console.log(this)
 
-        //let orderFilmTotalPrice = document.getElementById('orderFilmTotalPrice')
-        //let orderFilmCountTiket = document.getElementById('orderFilmCountTiket')
-
-       // orderFilmTotalPrice.innerHTML = filmPrice * orderFilmCountTiket.innerHTML
-
-        // orderFilmCountTiket.onchange = function(){
-        //     orderFilmTotalPrice.innerHTML = filmPrice * orderFilmCountTiket.value
-        // }
+        
     }
 
 
 
     filmsHireHtml.appendChild(tr)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Создание квадратиков мест
+
+
+
+
+
+
+
+
+
+
+
 
 let sendOrder = document.getElementById('sendOrder')
 sendOrder.onclick = function(){

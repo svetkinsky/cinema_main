@@ -993,7 +993,7 @@ a{
 }
 
 #filmsHire tr:hover td{
-    color: darksalmon;
+    color: #f58345;
     cursor: pointer;
 }
 
@@ -1050,6 +1050,10 @@ a{
     background: greenyellow;
 }
 
-.placeSelect {
+.placeHover {
     background: #4b4d4f;
+}
+
+.placeSelect{
+    background: #ffce13;
 }
