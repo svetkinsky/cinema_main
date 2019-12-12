@@ -1007,7 +1007,7 @@ a{
     left: 0;
     z-index: 1000;
     margin: auto;
-    padding: auto;
+    padding-top: 5rem;
 }
 
 #orderForm .block-8__input1{
